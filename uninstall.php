@@ -22,7 +22,7 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Plugin_Name
+ * @package    Mirovoy_Sales_Simple_Calendar
  */
 
 // If uninstall not called from WordPress, then exit.

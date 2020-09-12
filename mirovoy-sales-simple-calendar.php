@@ -10,14 +10,14 @@
  * plugin.
  *
  * @link              http://example.com
- * @since             1.0.0
+ * @since             0.99.1
  * @package           Mirovoy_Sales_Simple_Calendar
  *
  * @wordpress-plugin
  * Plugin Name:       WordPress Plugin Boilerplate
  * Plugin URI:        http://example.com/mirovoy-sales-simple-calendar-uri/
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
- * Version:           1.0.0
+ * Version:           0.99.1
  * Author:            Your Name or Your Company
  * Author URI:        http://example.com/
  * License:           GPL-2.0+
@@ -33,10 +33,10 @@ if ( ! defined( 'WPINC' ) ) {
 
 /**
  * Currently plugin version.
- * Start at version 1.0.0 and use SemVer - https://semver.org
+ * Start at version 0.99.1 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'MIROVOY_SALES_SIMPLE_CALENDAR_VERSION', '1.0.0' );
+define( 'MIROVOY_SALES_SIMPLE_CALENDAR_VERSION', '0.99.1' );
 
 /**
  * The code that runs during plugin activation.
@@ -76,7 +76,7 @@ require plugin_dir_path( __FILE__ )
  * then kicking off the plugin from this point in the file does
  * not affect the page life cycle.
  *
- * @since    1.0.0
+ * @since    0.99.1
  */
 function run_mirovoy_sales_simple_calendar() {
 

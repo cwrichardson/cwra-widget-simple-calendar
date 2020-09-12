@@ -6,7 +6,7 @@
  * This file is used to markup the public-facing aspects of the plugin.
  *
  * @link       http://example.com
- * @since      1.0.0
+ * @since      0.99.1
  *
  * @package    Mirovoy_Sales_Simple_Calendar
  * @subpackage Mirovoy_Sales_Simple_Calendar/public/partials

@@ -23,7 +23,7 @@
  * https://github.com/tommcfarlin/WordPress-Plugin-Boilerplate/pull/123#issuecomment-28541913
  *
  * @link       http://example.com
- * @since      1.0.0
+ * @since      0.99.1
  *
  * @package    Mirovoy_Sales_Simple_Calendar
  */

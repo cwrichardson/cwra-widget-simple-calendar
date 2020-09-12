@@ -13,7 +13,8 @@
 /**
  * Fired during plugin deactivation.
  *
- * This class defines all code necessary to run during the plugin's deactivation.
+ * This class defines all code necessary to run during the plugin's
+ * deactivation.
  *
  * @since      1.0.0
  * @package    Mirovoy_Sales_Simple_Calendar

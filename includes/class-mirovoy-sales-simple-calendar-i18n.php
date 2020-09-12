@@ -37,7 +37,8 @@ class Mirovoy_Sales_Simple_Calendar_i18n {
 		load_plugin_textdomain(
 			'mirovoy-sales-simple-calendar',
 			false,
-			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
+			dirname( dirname( plugin_basename( __FILE__ ) ) )
+			  . '/languages/'
 		);
 
 	}

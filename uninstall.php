@@ -22,10 +22,10 @@
  * For more information, see the following discussion:
  * https://github.com/tommcfarlin/WordPress-Plugin-Boilerplate/pull/123#issuecomment-28541913
  *
- * @link       http://example.com
+ * @link       https://www.cwrichardson.com/open-source/
  * @since      0.99.1
  *
- * @package    Mirovoy_Sales_Simple_Calendar
+ * @package    CWRA_Widget_Simple_Calendar
  */
 
 // If uninstall not called from WordPress, then exit.

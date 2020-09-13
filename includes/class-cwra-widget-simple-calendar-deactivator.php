@@ -3,11 +3,11 @@
 /**
  * Fired during plugin deactivation
  *
- * @link       http://example.com
+ * @link       https://www.cwrichardson.com/open-source/
  * @since      0.99.1
  *
- * @package    Mirovoy_Sales_Simple_Calendar
- * @subpackage Mirovoy_Sales_Simple_Calendar/includes
+ * @package    CWRA_Widget_Simple_Calendar
+ * @subpackage CWRA_Widget_Simple_Calendar/includes
  */
 
 /**
@@ -17,11 +17,11 @@
  * deactivation.
  *
  * @since      0.99.1
- * @package    Mirovoy_Sales_Simple_Calendar
- * @subpackage Mirovoy_Sales_Simple_Calendar/includes
- * @author     Your Name <email@example.com>
+ * @package    CWRA_Widget_Simple_Calendar
+ * @subpackage CWRA_Widget_Simple_Calendar/includes
+ * @author     Chris Richardson <cwr@cwrichardson.com>
  */
-class Mirovoy_Sales_Simple_Calendar_Deactivator {
+class CWRA_Widget_Simple_Calendar_Deactivator {
 
 	/**
 	 * Short Description. (use period)

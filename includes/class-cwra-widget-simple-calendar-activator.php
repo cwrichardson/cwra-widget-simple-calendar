@@ -3,11 +3,11 @@
 /**
  * Fired during plugin activation
  *
- * @link       http://example.com
+ * @link       https://www.cwrichardson.com/open-source/
  * @since      0.99.1
  *
- * @package    Mirovoy_Sales_Simple_Calendar
- * @subpackage Mirovoy_Sales_Simple_Calendar/includes
+ * @package    CWRA_Widget_Simple_Calendar
+ * @subpackage CWRA_Widget_Simple_Calendar/includes
  */
 
 /**
@@ -16,11 +16,11 @@
  * This class defines all code necessary to run during the plugin's activation.
  *
  * @since      0.99.1
- * @package    Mirovoy_Sales_Simple_Calendar
- * @subpackage Mirovoy_Sales_Simple_Calendar/includes
- * @author     Your Name <email@example.com>
+ * @package    CWRA_Widget_Simple_Calendar
+ * @subpackage CWRA_Widget_Simple_Calendar/includes
+ * @author     Chris Richardson <cwr@cwrichardson.com>
  */
-class Mirovoy_Sales_Simple_Calendar_Activator {
+class CWRA_Widget_Simple_Calendar_Activator {
 
 	/**
 	 * Short Description. (use period)

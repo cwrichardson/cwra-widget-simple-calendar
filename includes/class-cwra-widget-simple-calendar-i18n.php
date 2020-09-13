@@ -6,11 +6,11 @@
  * Loads and defines the internationalization files for this plugin
  * so that it is ready for translation.
  *
- * @link       http://example.com
+ * @link       https://www.cwrichardson.com/open-source/
  * @since      0.99.1
  *
- * @package    Mirovoy_Sales_Simple_Calendar
- * @subpackage Mirovoy_Sales_Simple_Calendar/includes
+ * @package    CWRA_Widget_Simple_Calendar
+ * @subpackage CWRA_Widget_Simple_Calendar/includes
  */
 
 /**
@@ -20,11 +20,11 @@
  * so that it is ready for translation.
  *
  * @since      0.99.1
- * @package    Mirovoy_Sales_Simple_Calendar
- * @subpackage Mirovoy_Sales_Simple_Calendar/includes
- * @author     Your Name <email@example.com>
+ * @package    CWRA_Widget_Simple_Calendar
+ * @subpackage CWRA_Widget_Simple_Calendar/includes
+ * @author     Chris Richardson <cwr@cwrichardson.com>
  */
-class Mirovoy_Sales_Simple_Calendar_i18n {
+class CWRA_Widget_Simple_Calendar_i18n {
 
 
 	/**
@@ -35,10 +35,10 @@ class Mirovoy_Sales_Simple_Calendar_i18n {
 	public function load_plugin_textdomain() {
 
 		load_plugin_textdomain(
-			'mirovoy-sales-simple-calendar',
+			'cwra-widget-simple-calendar',
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) )
-			  . '/languages/'
+			    . '/languages/'
 		);
 
 	}

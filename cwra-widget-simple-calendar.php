@@ -9,20 +9,20 @@
  * deactivation functions, and defines a function that starts the
  * plugin.
  *
- * @link              http://example.com
+ * @link              https://www.cwrichardson.com/open-source/
  * @since             0.99.1
- * @package           Mirovoy_Sales_Simple_Calendar
+ * @package           CWRA_Widget_Simple_Calendar
  *
  * @wordpress-plugin
- * Plugin Name:       WordPress Plugin Boilerplate
- * Plugin URI:        http://example.com/mirovoy-sales-simple-calendar-uri/
+ * Plugin Name:       CWR+A Widget Simple Calendar
+ * Plugin URI:        https://www.cwrichardson.com/open-source/cwra-widget-simple-calendar
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
  * Version:           0.99.1
- * Author:            Your Name or Your Company
- * Author URI:        http://example.com/
+ * Author:            Chris Richardson
+ * Author URI:        https://www.chrisrichardson.info
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       mirovoy-sales-simple-calendar
+ * Text Domain:       cwra-widget-simple-calendar
  * Domain Path:       /languages
  */
 
@@ -36,38 +36,40 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 0.99.1 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'MIROVOY_SALES_SIMPLE_CALENDAR_VERSION', '0.99.1' );
+define( 'CWRA_WIDGET_SIMPLE_CALENDAR_VERSION', '0.99.1' );
 
 /**
  * The code that runs during plugin activation.
- * This action is documented in includes/class-mirovoy-sales-simple-calendar-activator.php
+ * This action is documented in
+ * includes/class-cwra-widget-simple-calendar-activator.php
  */
-function activate_mirovoy_sales_simple_calendar() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-mirovoy-sales-simple-calendar-activator.php';
-	Mirovoy_Sales_Simple_Calendar_Activator::activate();
+function activate_cwra_widget_simple_calendar() {
+	require_once plugin_dir_path( __FILE__ )
+	    . 'includes/class-cwra-widget-simple-calendar-activator.php';
+	CWRA_Widget_Simple_Calendar_Activator::activate();
 }
 
 /**
  * The code that runs during plugin deactivation.
  * This action is documented in
- * includes/class-mirovoy-sales-simple-calendar-deactivator.php
+ * includes/class-cwra-widget-simple-calendar-deactivator.php
  */
-function deactivate_mirovoy_sales_simple_calendar() {
+function deactivate_cwra_widget_simple_calendar() {
 	require_once plugin_dir_path( __FILE__ )
-	  . 'includes/class-mirovoy-sales-simple-calendar-deactivator.php';
-	Mirovoy_Sales_Simple_Calendar_Deactivator::deactivate();
+	    . 'includes/class-cwra-widget-simple-calendar-deactivator.php';
+	CWRA_Widget_Simple_Calendar_Deactivator::deactivate();
 }
 
-register_activation_hook( __FILE__, 'activate_mirovoy_sales_simple_calendar' );
+register_activation_hook( __FILE__, 'activate_cwra_widget_simple_calendar' );
 register_deactivation_hook( __FILE__,
-  'deactivate_mirovoy_sales_simple_calendar' );
+    'deactivate_cwra_widget_simple_calendar' );
 
 /**
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
 require plugin_dir_path( __FILE__ )
-  . 'includes/class-mirovoy-sales-simple-calendar.php';
+    . 'includes/class-cwra-widget-simple-calendar.php';
 
 /**
  * Begins execution of the plugin.
@@ -78,10 +80,10 @@ require plugin_dir_path( __FILE__ )
  *
  * @since    0.99.1
  */
-function run_mirovoy_sales_simple_calendar() {
+function run_cwra_widget_simple_calendar() {
 
-	$plugin = new Mirovoy_Sales_Simple_Calendar();
+	$plugin = new CWRA_Widget_Simple_Calendar();
 	$plugin->run();
 
 }
-run_mirovoy_sales_simple_calendar();
+run_cwra_widget_simple_calendar();

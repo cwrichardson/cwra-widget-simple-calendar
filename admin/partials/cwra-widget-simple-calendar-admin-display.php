@@ -5,11 +5,11 @@
  *
  * This file is used to markup the admin-facing aspects of the plugin.
  *
- * @link       http://example.com
+ * @link       https://www.cwrichardson.com/open-source/
  * @since      0.99.1
  *
- * @package    Mirovoy_Sales_Simple_Calendar
- * @subpackage Mirovoy_Sales_Simple_Calendar/admin/partials
+ * @package    CWRA_Widget_Simple_Calendar
+ * @subpackage CWRA_Widget_Simple_Calendar/admin/partials
  */
 ?>
 

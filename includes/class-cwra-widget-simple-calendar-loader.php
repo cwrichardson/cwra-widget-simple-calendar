@@ -3,11 +3,11 @@
 /**
  * Register all actions and filters for the plugin
  *
- * @link       http://example.com
+ * @link       https://www.cwrichardson.com/open-source/
  * @since      0.99.1
  *
- * @package    Mirovoy_Sales_Simple_Calendar
- * @subpackage Mirovoy_Sales_Simple_Calendar/includes
+ * @package    CWRA_Widget_Simple_Calendar
+ * @subpackage CWRA_Widget_Simple_Calendar/includes
  */
 
 /**
@@ -17,19 +17,19 @@
  * the plugin, and register them with the WordPress API. Call the
  * run function to execute the list of actions and filters.
  *
- * @package    Mirovoy_Sales_Simple_Calendar
- * @subpackage Mirovoy_Sales_Simple_Calendar/includes
- * @author     Your Name <email@example.com>
+ * @package    CWRA_Widget_Simple_Calendar
+ * @subpackage CWRA_Widget_Simple_Calendar/includes
+ * @author     Chris Richardson <cwr@cwrichardson.com>
  */
-class Mirovoy_Sales_Simple_Calendar_Loader {
+class CWRA_Widget_Simple_Calendar_Loader {
 
 	/**
 	 * The array of actions registered with WordPress.
 	 *
 	 * @since    0.99.1
 	 * @access   protected
-	 * @var      array    $actions    The actions registered with
-	 *   WordPress to fire when the plugin loads.
+	 * @var      array    $actions    The actions registered with WordPress
+	 *     to fire when the plugin loads.
 	 */
 	protected $actions;
 
@@ -38,8 +38,8 @@ class Mirovoy_Sales_Simple_Calendar_Loader {
 	 *
 	 * @since    0.99.1
 	 * @access   protected
-	 * @var      array    $filters    The filters registered with
-	 *   WordPress to fire when the plugin loads.
+	 * @var      array    $filters    The filters registered with WordPress
+	 *     to fire when the plugin loads.
 	 */
 	protected $filters;
 
@@ -60,21 +60,21 @@ class Mirovoy_Sales_Simple_Calendar_Loader {
 	 *
 	 * @since    0.99.1
 	 * @param    string               $hook             The name of the
-	 *   WordPress action that is being registered.
+	 *     WordPress action that is being registered.
 	 * @param    object               $component        A reference to the
-	 *   instance of the object on which the action is defined.
+	 *     instance of the object on which the action is defined.
 	 * @param    string               $callback         The name of the
-	 *   function definition on the $component.
+	 *     function definition on the $component.
 	 * @param    int                  $priority         Optional. The
-	 *   priority at which the function should be fired. Default is 10.
+	 *     priority at which the function should be fired. Default is 10.
 	 * @param    int                  $accepted_args    Optional. The
-	 *   number of arguments that should be passed to the $callback.
-	 *   Default is 1.
+	 *     number of arguments that should be passed to the $callback.
+	 *     Default is 1.
 	 */
 	public function add_action( $hook, $component, $callback,
-	  $priority = 10, $accepted_args = 1 ) {
+	    $priority = 10, $accepted_args = 1 ) {
 		$this->actions = $this->add( $this->actions, $hook,
-		  $component, $callback, $priority, $accepted_args );
+		    $component, $callback, $priority, $accepted_args );
 	}
 
 	/**
@@ -82,46 +82,46 @@ class Mirovoy_Sales_Simple_Calendar_Loader {
 	 *
 	 * @since    0.99.1
 	 * @param    string               $hook             The name of the
-	 *   WordPress filter that is being registered.
-	 * @param    object               $component        A reference to
-	 *   the instance of the object on which the filter is defined.
+	 *     WordPress filter that is being registered.
+	 * @param    object               $component        A reference to the
+	 *     instance of the object on which the filter is defined.
 	 * @param    string               $callback         The name of the
-	 *   function definition on the $component.
+	 *     function definition on the $component.
 	 * @param    int                  $priority         Optional. The
-	 *   priority at which the function should be fired. Default is 10.
+	 *     priority at which the function should be fired. Default is 10.
 	 * @param    int                  $accepted_args    Optional. The
-	 *   number of arguments that should be passed to the $callback.
-	 *   Default is 1
+	 *     number of arguments that should be passed to the $callback.
+	 *     Default is 1
 	 */
 	public function add_filter( $hook, $component, $callback,
-	  $priority = 10, $accepted_args = 1 ) {
+	    $priority = 10, $accepted_args = 1 ) {
 		$this->filters = $this->add( $this->filters, $hook,
-		  $component, $callback, $priority, $accepted_args );
+		    $component, $callback, $priority, $accepted_args );
 	}
 
 	/**
-	 * A utility function that is used to register the actions and
-	 * hooks into a single collection.
+	 * A utility function that is used to register the actions
+	 * and hooks into a single collection.
 	 *
 	 * @since    0.99.1
 	 * @access   private
-	 * @param    array                $hooks            The collection
-	 *   of hooks that is being registered (that is, actions or filters).
+	 * @param    array                $hooks            The collection of
+	 *     hooks that is being registered (that is, actions or filters).
 	 * @param    string               $hook             The name of the
-	 *   WordPress filter that is being registered.
-	 * @param    object               $component        A reference to
-	 *   the instance of the object on which the filter is defined.
+	 *     WordPress filter that is being registered.
+	 * @param    object               $component        A reference to the
+	 *     instance of the object on which the filter is defined.
 	 * @param    string               $callback         The name of the
-	 *   function definition on the $component.
+	 *     function definition on the $component.
 	 * @param    int                  $priority         The priority at
-	 *   which the function should be fired.
+	 *     which the function should be fired.
 	 * @param    int                  $accepted_args    The number of
-	 *   arguments that should be passed to the $callback.
+	 *     arguments that should be passed to the $callback.
 	 * @return   array                                  The collection of
-	 *   actions and filters registered with WordPress.
+	 *     actions and filters registered with WordPress.
 	 */
 	private function add( $hooks, $hook, $component, $callback,
-	  $priority, $accepted_args ) {
+	    $priority, $accepted_args ) {
 
 		$hooks[] = array(
 			'hook'          => $hook,

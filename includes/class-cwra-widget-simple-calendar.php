@@ -3,14 +3,14 @@
 /**
  * The file that defines the core plugin class
  *
- * A class definition that includes attributes and functions used across
- * both the public-facing side of the site and the admin area.
+ * A class definition that includes attributes and functions used
+ * across both the public-facing side of the site and the admin area.
  *
- * @link       http://example.com
+ * @link       https://www.cwrichardson.com/open-source/
  * @since      0.99.1
  *
- * @package    Mirovoy_Sales_Simple_Calendar
- * @subpackage Mirovoy_Sales_Simple_Calendar/includes
+ * @package    CWRA_Widget_Simple_Calendar
+ * @subpackage CWRA_Widget_Simple_Calendar/includes
  */
 
 /**
@@ -23,20 +23,20 @@
  * version of the plugin.
  *
  * @since      0.99.1
- * @package    Mirovoy_Sales_Simple_Calendar
- * @subpackage Mirovoy_Sales_Simple_Calendar/includes
- * @author     Your Name <email@example.com>
+ * @package    CWRA_Widget_Simple_Calendar
+ * @subpackage CWRA_Widget_Simple_Calendar/includes
+ * @author     Chris Richardson <cwr@cwrichardson.com>
  */
-class Mirovoy_Sales_Simple_Calendar {
+class CWRA_Widget_Simple_Calendar {
 
 	/**
-	 * The loader that's responsible for maintaining and registering all
-	 * hooks that power the plugin.
+	 * The loader that's responsible for maintaining and
+	 * registering all hooks that power the plugin.
 	 *
 	 * @since    0.99.1
 	 * @access   protected
-	 * @var      Mirovoy_Sales_Simple_Calendar_Loader    $loader 
-	 *   Maintains and registers all hooks for the plugin.
+	 * @var      CWRA_Widget_Simple_Calendar_Loader    $loader    Maintains
+	 *     and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
@@ -45,10 +45,10 @@ class Mirovoy_Sales_Simple_Calendar {
 	 *
 	 * @since    0.99.1
 	 * @access   protected
-	 * @var      string    $mirovoy_sales_simple_calendar    The string
-	 *   used to uniquely identify this plugin.
+	 * @var      string    $plugin_name    The string used to uniquely
+	 *     identify this plugin.
 	 */
-	protected $mirovoy_sales_simple_calendar;
+	protected $plugin_name;
 
 	/**
 	 * The current version of the plugin.
@@ -70,13 +70,12 @@ class Mirovoy_Sales_Simple_Calendar {
 	 * @since    0.99.1
 	 */
 	public function __construct() {
-		if ( defined( 'MIROVOY_SALES_SIMPLE_CALENDAR_VERSION' ) ) {
-			$this->version = MIROVOY_SALES_SIMPLE_CALENDAR_VERSION;
+		if ( defined( 'CWRA_WIDGET_SIMPLE_CALENDAR_VERSION' ) ) {
+			$this->version = CWRA_WIDGET_SIMPLE_CALENDAR_VERSION;
 		} else {
 			$this->version = '0.99.1';
 		}
-		$this->mirovoy_sales_simple_calendar =
-		    'mirovoy-sales-simple-calendar';
+		$this->plugin_name = 'cwra-widget-simple-calendar';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -90,13 +89,13 @@ class Mirovoy_Sales_Simple_Calendar {
 	 *
 	 * Include the following files that make up the plugin:
 	 *
-	 * - Mirovoy_Sales_Simple_Calendar_Loader. Orchestrates the
+	 * - CWRA_Widget_Simple_Calendar_Loader. Orchestrates the
 	 *   hooks of the plugin.
-	 * - Mirovoy_Sales_Simple_Calendar_i18n. Defines
-	 *   internationalization functionality.
-	 * - Mirovoy_Sales_Simple_Calendar_Admin. Defines all hooks
+	 * - CWRA_Widget_Simple_Calendar_i18n. Defines internationalization
+	 *   functionality.
+	 * - CWRA_Widget_Simple_Calendar_Admin. Defines all hooks
 	 *   for the admin area.
-	 * - Mirovoy_Sales_Simple_Calendar_Public. Defines all hooks
+	 * - CWRA_Widget_Simple_Calendar_Public. Defines all hooks
 	 *   for the public side of the site.
 	 *
 	 * Create an instance of the loader which will be used to
@@ -112,49 +111,48 @@ class Mirovoy_Sales_Simple_Calendar {
 		 * actions and filters of the core plugin.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) )
-		    . 'includes/class-mirovoy-sales-simple-calendar-loader.php';
+		    . 'includes/class-cwra-widget-simple-calendar-loader.php';
 
 		/**
 		 * The class responsible for defining internationalization
 		 * functionality of the plugin.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) )
-		    . 'includes/class-mirovoy-sales-simple-calendar-i18n.php';
+		    . 'includes/class-cwra-widget-simple-calendar-i18n.php';
 
 		/**
 		 * The class responsible for defining all actions
 		 * that occur in the admin area.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) )
-		    . 'admin/class-mirovoy-sales-simple-calendar-admin.php';
+		    . 'admin/class-cwra-widget-simple-calendar-admin.php';
 
 		/**
 		 * The class responsible for defining all actions
 		 * that occur in the public-facing side of the site.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) )
-		    . 'public/class-mirovoy-sales-simple-calendar-public.php';
+		    . 'public/class-cwra-widget-simple-calendar-public.php';
 
-		$this->loader = new Mirovoy_Sales_Simple_Calendar_Loader();
+		$this->loader = new CWRA_Widget_Simple_Calendar_Loader();
 
 	}
 
 	/**
 	 * Define the locale for this plugin for internationalization.
 	 *
-	 * Uses the Mirovoy_Sales_Simple_Calendar_i18n class in
-	 * order to set the domain and to register the hook with
-	 * WordPress.
+	 * Uses the CWRA_Widget_Simple_Calendar_i18n class in order
+	 * to set the domain and to register the hook with WordPress.
 	 *
 	 * @since    0.99.1
 	 * @access   private
 	 */
 	private function set_locale() {
 
-		$plugin_i18n = new Mirovoy_Sales_Simple_Calendar_i18n();
+		$plugin_i18n = new CWRA_Widget_Simple_Calendar_i18n();
 
-		$this->loader->add_action( 'plugins_loaded',
-		    $plugin_i18n, 'load_plugin_textdomain' );
+		$this->loader->add_action( 'plugins_loaded', $plugin_i18n,
+		    'load_plugin_textdomain' );
 
 	}
 
@@ -167,9 +165,8 @@ class Mirovoy_Sales_Simple_Calendar {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new Mirovoy_Sales_Simple_Calendar_Admin(
-		    $this->get_mirovoy_sales_simple_calendar(),
-		    $this->get_version() );
+		$plugin_admin = new CWRA_Widget_Simple_Calendar_Admin(
+		    $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts',
 		    $plugin_admin, 'enqueue_styles' );
@@ -187,9 +184,8 @@ class Mirovoy_Sales_Simple_Calendar {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new Mirovoy_Sales_Simple_Calendar_Public(
-		    $this->get_mirovoy_sales_simple_calendar(),
-		    $this->get_version() );
+		$plugin_public = new CWRA_Widget_Simple_Calendar_Public(
+		    $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'wp_enqueue_scripts',
 		    $plugin_public, 'enqueue_styles' );
@@ -215,8 +211,8 @@ class Mirovoy_Sales_Simple_Calendar {
 	 * @since     0.99.1
 	 * @return    string    The name of the plugin.
 	 */
-	public function get_mirovoy_sales_simple_calendar() {
-		return $this->mirovoy_sales_simple_calendar;
+	public function get_plugin_name() {
+		return $this->plugin_name;
 	}
 
 	/**
@@ -224,8 +220,8 @@ class Mirovoy_Sales_Simple_Calendar {
 	 * with the plugin.
 	 *
 	 * @since     0.99.1
-	 * @return    Mirovoy_Sales_Simple_Calendar_Loader    Orchestrates the
-	 *   hooks of the plugin.
+	 * @return    CWRA_Widget_Simple_Calendar_Loader    Orchestrates the
+	 *     hooks of the plugin.
 	 */
 	public function get_loader() {
 		return $this->loader;

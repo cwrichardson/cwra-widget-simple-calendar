@@ -109,4 +109,15 @@ class CWRA_Widget_Simple_Calendar_Admin {
 
 	}
 
+	/**
+	 * Register the widget
+	 *
+	 * @since    0.99.1
+	 */
+	public function register_widgets() {
+
+		register_widget( 'CWRA_Widget_Simple_Calendar' );
+
+	}
+
 }

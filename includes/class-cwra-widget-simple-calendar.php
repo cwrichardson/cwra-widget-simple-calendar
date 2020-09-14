@@ -97,6 +97,8 @@ class CWRA_Widget_Simple_Calendar {
 	 *   for the admin area.
 	 * - CWRA_Widget_Simple_Calendar_Public. Defines all hooks
 	 *   for the public side of the site.
+	 * - CWRA_Widget_Simple_Calendar_Widget. Defines all hooks for
+	 *   the widget.
 	 *
 	 * Create an instance of the loader which will be used to
 	 * register the hooks with WordPress.
@@ -133,6 +135,12 @@ class CWRA_Widget_Simple_Calendar {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) )
 		    . 'public/class-cwra-widget-simple-calendar-public.php';
+
+		/**
+		 * The class responsible for the widget.
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) )
+		    . 'widgets/cwra-widget-simple-calendar.php';
 
 		$this->loader = new CWRA_Widget_Simple_Calendar_Loader();
 
@@ -172,6 +180,9 @@ class CWRA_Widget_Simple_Calendar {
 		    $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts',
 		    $plugin_admin, 'enqueue_scripts' );
+
+		$this->loader->add_action( 'widgets_init', $plugin_admin,
+		    'register_widgets' );
 
 	}
 

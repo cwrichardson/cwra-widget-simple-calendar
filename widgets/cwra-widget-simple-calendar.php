@@ -7,7 +7,7 @@
  * @author	Chris Richardson <cwr@cwrichardson.com>
  * @since	0.99.1
  */
-class CWRA_Widget_Simple_Calendar extends WP_Widget {
+class CWRA_Widget_Simple_Calendar_Widget extends WP_Widget {
 
 	/*
 	 * Constructor for the widget
@@ -58,7 +58,7 @@ class CWRA_Widget_Simple_Calendar extends WP_Widget {
 	 */
 	public function update ( $new_instance, $old_instance ) {
 		$instance = $old_instance;
-		$instance['title'] = strip_tags($new_instance['title'];
+		$instance['title'] = strip_tags($new_instance['title']);
 
 		return $instance;
 	}

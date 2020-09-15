@@ -116,7 +116,7 @@ class CWRA_Widget_Simple_Calendar_Admin {
 	 */
 	public function register_widgets() {
 
-		register_widget( 'CWRA_Widget_Simple_Calendar' );
+		register_widget( 'CWRA_Widget_Simple_Calendar_Widget' );
 
 	}
 

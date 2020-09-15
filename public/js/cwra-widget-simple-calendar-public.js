@@ -30,4 +30,6 @@
 	 * own work.
 	 */
 
+	 $(".cwra-wsc").flatpickr();
+
 })( jQuery );

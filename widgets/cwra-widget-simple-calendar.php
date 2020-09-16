@@ -87,9 +87,7 @@ class CWRA_Widget_Simple_Calendar_Widget extends WP_Widget {
 			echo $before_title . $title . $after_title;
 		}
 		?>
-			<div class="testing-a-widget">
-			    <p>Here is some widget stuff.</p>
-			</div>
+			<div class="cwra-wsc"></div>
 		<?php
 		echo $after_widget;
 	}

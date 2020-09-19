@@ -80,7 +80,7 @@ class CWRA_Widget_Simple_Calendar_Public {
 		    array(), $this->version, 'all' );
 
 		// flatpickr styles
-		wp_enqueue_style( $this->plugin_name,
+		wp_enqueue_style( $this->plugin_name . '-flatpickr',
 		    'https://cdn.jsdelivr.net/npm/flatpickr/dist/'
 		    . 'flatpickr.min.css', array(), $this->version, 'all' );
 
@@ -112,7 +112,7 @@ class CWRA_Widget_Simple_Calendar_Public {
 		    array( 'jquery' ), $this->version, false );
 
 		// flatpickr
-		wp_enqueue_script( $this->plugin_name,
+		wp_enqueue_script( $this->plugin_name . '-flatpickr',
 		    'https://cdn.jsdelivr.net/npm/flatpickr',
 		    array( 'jquery' ), $this->version, false );
 

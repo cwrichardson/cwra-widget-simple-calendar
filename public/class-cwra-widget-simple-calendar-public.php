@@ -79,6 +79,11 @@ class CWRA_Widget_Simple_Calendar_Public {
 		      . 'css/cwra-widget-simple-calendar-public.css',
 		    array(), $this->version, 'all' );
 
+		// flatpickr styles
+		wp_enqueue_style( $this->plugin_name,
+		    'https://cdn.jsdelivr.net/npm/flatpickr/dist/'
+		    . 'flatpickr.min.css', array(), $this->version, 'all' );
+
 	}
 
 	/**
@@ -104,6 +109,11 @@ class CWRA_Widget_Simple_Calendar_Public {
 		wp_enqueue_script( $this->plugin_name,
 		    plugin_dir_url( __FILE__ )
 		      . 'js/cwra-widget-simple-calendar-public.js',
+		    array( 'jquery' ), $this->version, false );
+
+		// flatpickr
+		wp_enqueue_script( $this->plugin_name,
+		    'https://cdn.jsdelivr.net/npm/flatpickr',
 		    array( 'jquery' ), $this->version, false );
 
 	}
